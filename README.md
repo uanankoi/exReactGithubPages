@@ -1,68 +1,86 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react 開GithubPages
 
-## Available Scripts
+## 簡易流程
+安裝 npm,yarn,create-react-app --><br>
+開啟終端機 cd 專案檔案 `create-react-app 專案名` --><br>
+`npm start` 或 `yarn start` 確認完成無錯誤 --><br>
+github建新專案 --><br>
+再次開啟終端機 cd 專案 `npm gh-pages` 或 `yarn add gh-pages` --><br>
+終端機`git add .` `git commit -m '敘述'` 
+`git remote add origin github專案.git`<br>
+`git branch -M main`
+`git push -u origin main` --><br>
+至github專案settings的Github Pages 改Source後，複製Github Pages網址--><br>
+編輯器開react專案的package.json新增
+`"homepage": "Github Pages網址"`<br>
+`"predeploy":"yarn build"`
+`"deploy":"gh-pages -d build"`
+--><br>
+終端機`git add .` `git commit -m '敘述'` `yarn run deploy`
+--><br>
+再次至github專案settings的Github Pages 改Source 'gh-pages'
+--><br>
+完成 可以開始code 更新Github Pages依然至終端機`yarn run deploy`
+--><br>
+git 推送依然可以更新main <br>
+用`yarn run deploy`更新gh-pages分支
 
-In the project directory, you can run:
+### 安裝 npm,yarn,create-react-app
+NPM 是 Node Package Manager 的簡稱，可下載各種 Javascript 套件<br>
+Yarn 是由 Facebook，Google，Exponent 和 Tilde 構建的新的 JavaScript 包管理器，安裝套件比 npm 來得快些<br>
+create-react-app 是建立react開發環境工具<br>
 
-### `yarn start`
+### 建立專案
+開啟終端機 cd 專案檔案 `create-react-app 專案名`，完成後開github建新專案<br>
+<img src="https://i.imgur.com/uIDZNO9.png" width="600px"></img>
+<br>
+<img src="https://i.imgur.com/vgapEI2.png" width="600px"></img>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 裝gh-pages
+再次開啟終端機 cd 專案 `npm gh-pages` 或 `yarn add gh-pages`<br>
+終端機`git add .` `git commit -m '敘述'` 
+`git remote add origin github專案.git`
+`git branch -M main`
+`git push -u origin main`<br>
+<img src="https://i.imgur.com/gIjhVlR.png" width="600px"></img>
+<br>
+<img src="https://i.imgur.com/xpZb0Ew.png" width="600px"></img>
+<br>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### 改settiings
+至github專案settings的Github Pages 改Source後，複製Github Pages網址<br>
+<img src="https://i.imgur.com/174WWls.png" width="600px"></img>
+<br>
+<img src="https://i.imgur.com/87rESZX.png" width="600px"></img>
+<br>
 
-### `yarn test`
+### 改package.json
+編輯器開react專案的package.json新增
+`"homepage": "Github Pages網址"`
+`"predeploy":"yarn build"`
+`"deploy":"gh-pages -d build"`<br>
+於終端機`git add .` `git commit -m '敘述'` `yarn run deploy`<br>
+<img src="https://i.imgur.com/5rVh0H1.png" width="600px"></img>
+<br>
+<img src="https://i.imgur.com/aVyz11T.png" width="600px"></img>
+<br>
+<img src="https://i.imgur.com/earkrHi.png" width="600px"></img>
+<br>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 再次更改settings
+再次至github專案settings的Github Pages 改Source 'gh-pages'<br>
+完成 可以開始code <br>
+git 推送依然可以更新main <br>
+用`yarn run deploy`更新gh-pages分支<br>
+<img src="https://i.imgur.com/TE0xAQv.png" width="600px"></img>
+<br>
+<img src="https://i.imgur.com/QCgtZs1.png" width="600px"></img>
+<br>
 
-### `yarn build`
+### DEMO
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[DEMO](https://uanankoi.github.io/exReactGithubPages/)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### 資料參考來源
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[How to deploy a Create React App Website to GitHub Pages](https://www.youtube.com/watch?v=ctLFWAanxcI)
